@@ -13,6 +13,10 @@ languages_db = []
 
 # --- ENDPOINTS ---
 
+@app.get("/")
+def home():
+    return {"message": "API is running successfully 🚀"}
+
 @app.get("/languages")
 def get_all_languages():
     """Returns everything users have added so far"""
